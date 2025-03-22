@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    color: whitesmoke;
+}
+
+/* .App {
+  text-align: center;
+  margin: 0px;
+} */
+body {
+    background: #151515;
+    /* padding: 0 16px; */
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner {
+    height: 150px;
+}
+
+.banner img {
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+    /* background-image: url("../images/space.png"); */
+    background-size: cover;
+    background-color: black;
+    /* background-position: left 90%; */
+    object-fit: cover;
+}
+
+.header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    top: 0px;
+    padding: 40px 50px;
+    z-index: 2;
+    align-items: center;
+}
+.logo-box {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    padding: 15px 30px;
+    background-image: url("../images/noise1.png");
+}
+.logo-box img {
+    height: auto;
+    width: 100px;
+}
+
+.overlay {
+    display: fixed;
+    opacity: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.main-body {
+    /* padding: 20px 20px; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: stretch;
+    height: 100vh;
+    /* gap: 40px; */
+}
+
+.journal {
+    flex-grow: 1;
+    background-color: #151515;
+    /* border: 1px solid #0b0b0b; */
+    /* border-radius: 20px; */
+    padding: 50px;
+}
+
+.journal textarea {
+    all: unset;
+    width: 100%;
+    height: 500px;
+    font-size: 14px;
+    margin: 13px 0px;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.habit-container {
+    background-color: #131313;
+    /* border: 1px solid #0b0b0b; */
+    width: auto;
+    /* border-radius: 20px; */
+    padding: 50px;
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.headerPlus {
+    font-size: 32px;
+    font-weight: 200;
+    opacity: 50%;
+}
+
+.habit-box {
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: auto 25px 30px;
+    grid-template-rows: 1fr 1fr;
+    background-color: #0b0b0b;
+    height: 58px;
+    width: 220px;
+    border-radius: 20px;
+    margin: 11px 0px;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.habit-overlay {
+    position: absolute;
+    background-color: #27213a;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    height: 58px;
+    max-width: 220px;
+    /* border-radius: 150px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+
+.title {
+    align-self: flex-end;
+    align-items: baseline;
+    font-size: 10px;
+    font-weight: 700;
+    margin: 1px 20px;
+    z-index: 1;
+}
+.streak {
+    grid-row: span 2;
+    align-items: center;
+    align-self: center;
+    font-weight: 700;
+    font-size: 11px;
+    z-index: 1;
+    text-align: end;
+    margin-right: 5px;
+}
+.plus {
+    color: whitesmoke;
+    grid-row: span 2;
+    align-items: center;
+    align-self: center;
+    font-size: 28px;
+    font-weight: 200;
+    opacity: 50%;
+    z-index: 1;
+}
+.plus > button {
+    all: unset; /* This clears all default styles */
+    display: inline-block; /* Ensure it's still a block element */
+    text-align: center; /* Optional: Ensures text is centered */
+    cursor: pointer; /* Optional: Ensures the pointer cursor when hovering */
+    font-family: inherit; /* Inherit the font from the parent */
+    font-size: inherit; /* Inherit the font size */
+}
+
+.goals {
+    align-self: flex-start;
+    font-size: 8px;
+    font-weight: 700;
+    margin: 5px 20px;
+    opacity: 50%;
+    z-index: 1;
+}
+
+.pop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 4s;
+
+    width: 950px;
+    height: 80%;
+    background-color: #151515;
+    border: solid 1.5px black;
+    padding: 40px;
+    padding-top: 10px;
+    border-radius: 25px;
+    z-index: 99;
+}
